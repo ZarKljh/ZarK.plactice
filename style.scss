@@ -1,55 +1,49 @@
-@import "./reset.scss";
+@import "/styles/reset.scss";
 
 body {
-    background: ivory;
-    display:flex;
-    height: 100vh;
+    background: #dce6d1;
+    display: flex;
     justify-content: center;
     align-items: center;
+    height : 100vh;
 }
 
 .phone {
-    width: 380px;
     background-color: black;
-    height: 88%;
-    border-radius: 60px;    
+    width: 420px;
+    height: 95%;
+    border-radius: 50px;
 }
-
-.header{
-    padding: 40px 10px 0px;
-    //border: 1px solid white;
-
-    .header__list{
-        color:white;
+ 
+.header {
+    overflow-x: scroll;
+    border: 1px solid white;
+    .header__list {
         display: flex;
+        color: white;
+        padding: 40px 10px 10px; 
         box-sizing: border-box;
-        gap: 10px;
+        gap: 15px;
         width: max-content;
-        padding: 10px 5px 20px;
-        //border: 1px solid white;
-        
         .header__list-item {
-            border: 1px solid white;
-            padding: 13px;
-            border-radius: 20px;
-            font-size: 13px;
+            border: 1px solid #4A4A4A;
+            padding: 10px;
+            border-radius: 15px;    
         }
-        .header__list-item--inverted{
-            color: black;
+        .header__list-item--inverted {
             background-color: white;
+            color: black;    
         }
     }
 }
 
 .cards {
-    margin: 10px 18px;
+    margin: 20px 8px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap:10px;
-    //border: 1px solid white;
+    gap: 10px;
     .cards__card {
-        border: 1px solid white;
-        color: white;
+        background-color: white;
         padding: 10px;
         border-radius: 15px;
         display: flex;
@@ -57,32 +51,67 @@ body {
         gap: 15px;
         justify-content: space-between;
         .card__title {
-            font-size: 27px;
+            font-size: 24px;
         }
         .card__footer {
             font-size: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .price {
-                border: 1px solid white;
+            span{
+                padding: 10px;
                 border-radius: 15px;
-                padding: 10px 10px;
-            }
-            .lenght {
                 border: 1px solid black;
-                border-radius: 15px;
-                padding: 10px; 
-                color: black;
                 background-color: white;
-
             }
         }
         &:nth-child(3n) {
-            grid-column: span 2;
+            grid-column : span 2;
         }
-    }
-    
+        &:nth-child(1) {
+            background-color: #292D32;
+            color:  white;
+            font-size: 100;
+            border: 1px solid white;
+            span{
+                border: 1px solid white;
+                color: black;
+            }
+        }
+        &:nth-child(2){
+            background-color: #FCFCF9;
+            .price{
+                background-color: #FDDF2C;
+            }
+        }
+        &:nth-child(3){
+            background-color: #FAFDC2;
+            .price{
+                background-color: #E9B0FA;
+            }
+        }
+        &:nth-child(4){
+            background-color: #B29FF5;
+            .price{
+                background-color: #FDDF2C;
+            }
+        }
+        &:nth-child(5){
+            background-color: #FFD4D4;
+            .price{
+                background-color: #E9B0FA;
+            }
+
+        }
+        &:nth-child(6){
+            background-color: #D1FFDF;
+            .price{
+                background-color: #E9B0FA;
+            }
+        }
+  
+    }   
 }
-
-
+//#FCFC9 #FAFDC2 #B29FF5 #FFD4D4 #D1FFDF
+//버튼 노랑색 #FDDF2C 핑크색 #E9B0FA
+//#0B0905
